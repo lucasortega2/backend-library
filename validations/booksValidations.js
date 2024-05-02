@@ -1,7 +1,7 @@
 import z from 'zod';
 
 const bookSchema = z.object({
-  title: z.string().min(3).max(30),
+  title: z.string().min(3).max(60),
   description: z.string().min(10).max(800),
   pages: z.number().int().min(0).max(6000),
   image_url: z.string().max(120),
