@@ -41,7 +41,7 @@ export const updateBookModel = async ({ id, data }) => {
       { _id: id },
       { $set: { ...data } },
     );
-    console.log(bookUptaded);
+
     return bookUptaded;
   } catch (error) {
     return false;

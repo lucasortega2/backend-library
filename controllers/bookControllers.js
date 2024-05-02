@@ -41,8 +41,9 @@ export const updateBookController = async (req, res) => {
   }
   const { id } = req.params;
   const updateBook = await updateBookModel({ id, data: book.data });
-  if (updateBook === false)
+  if (updateBook === false) {
     return res.status(404).json({ message: 'book not found' });
+  }
   res.json(updateBook);
 };
 
